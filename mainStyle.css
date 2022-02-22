@@ -115,3 +115,39 @@ form {
     border-bottom: dotted #000000;
     margin-bottom: -1px;
 }
+
+#linkToInfo {
+    color: #282828;
+    opacity: 50%;
+    margin: auto;
+    width: fit-content;
+    text-decoration-color: rgba(255, 255, 255, 0);
+}
+
+#linkToInfo:hover {
+    opacity: 100%;
+    animation: blinker 0.5s linear infinite;
+}
+
+@keyframes blinker {
+    0%{
+        font-size: initial ;
+    }
+    20% {
+        color: red;
+    }
+    40% {
+        color: orange;
+    }
+    60% {
+        color: lawngreen;
+        font-size: larger;
+    }
+    80% {
+        color: blue;
+
+    }
+    100% {
+        color: blueviolet;
+    }
+}
