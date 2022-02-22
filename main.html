@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <div>
+    <div id="inputDiv">
         <form id="inputForm">
             <label class="inputLabel" for="fnameinp"> Name: </label>
             <input class="inputLine" type="text" name="fnameinp" id="fnameinp">
@@ -38,6 +38,12 @@
             <tbody id="tbody"><!--- Table Entries ---></tbody>
         </table>
 
+    </div>
+
+    <div id="debugDiv">
+        <a id="linkToInfo" href="info.html"> About us </a>
+        <br>
+        <button id="clearStorageBtn" onclick="storageClear()"> CLEAR STORAGE </button>  <!--- Remove before submission --->
     </div>
 
 </body>
