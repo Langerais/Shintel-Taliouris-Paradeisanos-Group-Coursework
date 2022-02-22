@@ -12,5 +12,33 @@
 </head>
 <body>
 
+    <div>
+        <form id="inputForm">
+            <label class="inputLabel" for="fnameinp"> Name: </label>
+            <input class="inputLine" type="text" name="fnameinp" id="fnameinp">
+            <label class="inputLabel" for="lnameinp"> Surname: </label>
+            <input class="inputLine" type="text" name="lnameinp" id="lnameinp">
+            <input type="submit" value="Add" id="addBtn">
+        </form>
+    </div>
+
+    <div id="tableDiv">
+
+        <table id="table">
+
+            <thead>
+            <tr>
+                <th class="header">ID</th>
+                <th class="header">Name</th>
+                <th class="header">Surname</th>
+                <th>Remove</th>
+            </tr>
+            </thead>
+
+            <tbody id="tbody"><!--- Table Entries ---></tbody>
+        </table>
+
+    </div>
+
 </body>
 </html>
