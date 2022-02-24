@@ -133,11 +133,10 @@ function tableRefresh(){
     $(".dummyRow").remove();
 
     if(localStorage.key(0) == null){
-        $('#table > tbody').append(
-            '<tr class="dummyRow"><td> YOUR </td><td> TABLE </td> <td> IS </td><td> EMPTY </td></tr>'
-        );
+        $("#hint").show();
     } else
     {
+        $("#hint").hide();
         for(let i = 0; i < localStorage.length; i++){
             let person = $(localStorage.getItem(localStorage.key(i)).split(','));
             addRow(localStorage.key(i), person[0], person[1]);
