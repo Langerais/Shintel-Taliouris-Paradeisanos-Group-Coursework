@@ -24,10 +24,8 @@ $(document).ready(function(){
     tableRefresh();
 
     $('#table').on('click', 'input[type="image"]', function(){ //Remove entity button action
-        console.log("Removed: id " + $(this).closest('tr').attr("id"))
-        localStorage.removeItem($(this).closest('tr').attr("id"));
-        tableRefresh();
-    })
+        removeElement(this);
+    });
 
     $(".inputLine").on('change', function () {  //Capitalizes fname and lname on change
         let entered = $(this).val();
@@ -52,7 +50,7 @@ $(document).ready(function(){
             return false;
         }
         else if (!(fname+lname).match(letters)){
-            alert("Fields should contain only characters and dash")
+            alert("Fields should contain only characters and dash");
             return false;
         }
         else {
@@ -64,6 +62,12 @@ $(document).ready(function(){
 
 
 })
+
+function removeElement(element){
+    console.log("Removed: id " + $(element).closest('tr').attr("id"));
+    localStorage.removeItem($(element).closest('tr').attr("id"));
+    tableRefresh();
+}
 
 function clearInputFields(){
     $("#fnameinp").val('');
@@ -85,7 +89,6 @@ function addPerson(id, fname, lname){
             window.localStorage.setItem(maxId, person.join());  //Add Person to local storage
             addRow(maxId, fname, lname);
             addPersonRetryCounter = 0;
-
 
         } else {
             if(addPersonRetryCounter > addPersonRetryLimit){    //Just in case

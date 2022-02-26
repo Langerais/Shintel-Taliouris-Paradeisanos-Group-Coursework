@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(127, 143, 168);
+}
+
 div {
     margin: auto;
     width: 100%;
@@ -33,9 +37,9 @@ table {
 
 #table td {
     padding: 5px 10px 5px 10px;
-    border-right: #cccccc;
+    border-color: #65738c;
     border-width: 1px;
-    border-style: none dotted none none;
+    border-style: none solid dotted solid;
     vertical-align: top;
 }
 
