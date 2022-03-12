@@ -8,6 +8,12 @@
     - Remove debugging tools
     - Clean up a bit;
  */
+/**
+ * @fileOverview Script for main page, mostly for table
+ * @author Samuil Shintel
+ * @author Nikolaos Taliouris
+ * @author Nikolaos Paradeisanos
+ */
 
 
 var maxId = window.localStorage.length;
@@ -64,6 +70,10 @@ $(document).ready(function(){
 
 })
 
+/**
+ * Removes person from the storage and refreshes the table
+ * @param element - clicked remove row button
+ */
 function removeElement(element){
     console.log("Removed: id " + $(element).closest('tr').attr("id"));
     localStorage.removeItem($(element).closest('tr').attr("id"));

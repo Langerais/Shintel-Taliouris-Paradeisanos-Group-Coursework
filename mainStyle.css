@@ -139,7 +139,7 @@ form {
 }
 
 
-/* Starts info link 'blinker' animation on hover */
+/* Lets add some early 2000s vibes? */
 #linkToInfo:hover {
     opacity: 100%;
     animation: blinker 0.35s linear infinite;
