@@ -42,7 +42,7 @@ table {
     border-style: none solid dotted solid;
     vertical-align: top;
 }
-
+/* Alternating color for table rows */
 #table tr:nth-child(odd) {
     background-color: #FFFFFF;
 }
@@ -114,10 +114,10 @@ form {
     background-color: #67758c;
     border-left: solid #66748c;
     border-right: solid #66748c;
-
     margin-bottom: -1px;
 }
 
+/* 'YOUR TABLE IS EMPTY' table row */
 #hint {
 
     min-width: 442px;
@@ -138,6 +138,8 @@ form {
     text-decoration-color: rgba(255, 255, 255, 0);
 }
 
+
+/* Starts info link 'blinker' animation on hover */
 #linkToInfo:hover {
     opacity: 100%;
     animation: blinker 0.35s linear infinite;

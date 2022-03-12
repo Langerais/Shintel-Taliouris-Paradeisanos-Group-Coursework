@@ -34,10 +34,10 @@ $(document).ready(function(){
         $(this).val(firstLetter + rest);
     });
 
-    $("form").on("submit", function (event){    //Adding new entity
+    $("form").on("submit", function (event){    //Adding new entity to the table
 
-        let fname = $("#fnameinp").val();
-        let lname = $("#lnameinp").val();
+        let fname = $("#fnameinp").val();   //Get Firstname from input field
+        let lname = $("#lnameinp").val();   //Get Lastname from input field
 
         const letters = /^[A-Za-z\-]+$/;    //Chars accepted for text-fields
 
@@ -55,10 +55,11 @@ $(document).ready(function(){
         }
         else {
             clearInputFields();
-            addPerson( -1, fname, lname);
+            addPerson( -1, fname, lname);   //Adds person to the table with automatic ID creation
         }
 
     });
+
 
 
 })
@@ -91,9 +92,9 @@ function addPerson(id, fname, lname){
             addPersonRetryCounter = 0;
 
         } else {
-            if(addPersonRetryCounter > addPersonRetryLimit){    //Just in case
+            if(addPersonRetryCounter > addPersonRetryLimit){    //Just in case, don't ask why
                 addPersonRetryCounter += 1;
-                console.log("ERROR: ID - " + maxId + " already exists; Retrying");  //
+                console.log("ERROR: ID - " + maxId + " already exists; Retrying");
                 addPerson(maxId + 1, fname, lname);
             } else {
                 alert("An error occurred while adding the person. Retry limit reached");
