@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(57, 235, 160);
+}
+.avatar{
+    margin-top: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height:40%;
+    
+}
+.card-text{
+    text-align:  center;
+    font-size: xx-large;
+    color:aliceblue
+}
+.card-title{
+    text-align:  center;
+    font-size: xxx-large;
+    color:aliceblue
+}

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="mainStyle.css">
+    <link rel="stylesheet" href="header.css">
     <meta charset="UTF-8">
     <title>People List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,46 +10,60 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"></script>
     <script src="indexScript.js"></script>
-    <link rel="stylesheet" href="mainStyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
 </head>
 <body>
+<!--Sticky Header-->
+<div class="header" id="myHeader">
+    <h2>My Header</h2>
+</div>
+<script src="header.js"></script>
+<!--MainScript-->
+<div id="inputDiv">
+    <form id="inputForm">
+        <label class="inputLabel" for="fnameinp"> Name: </label>
+        <input class="inputLine" type="text" name="fnameinp" id="fnameinp">
+        <label class="inputLabel" for="lnameinp"> Surname: </label>
+        <input class="inputLine" type="text" name="lnameinp" id="lnameinp">
+        <input type="submit" value="Add" id="addBtn">
+    </form>
+</div>
+<div id="tableDiv">
+    <table id="table">
+        <thead>
+        <tr>
+            <th class="header">ID</th>
+            <th class="header">Name</th>
+            <th class="header">Surname</th>
+            <th>Remove</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
 
-    <div id="inputDiv">
-        <form id="inputForm">
-            <label class="inputLabel" for="fnameinp"> Name: </label>
-            <input class="inputLine" type="text" name="fnameinp" id="fnameinp">
-            <label class="inputLabel" for="lnameinp"> Surname: </label>
-            <input class="inputLine" type="text" name="lnameinp" id="lnameinp">
-            <input type="submit" value="Add" id="addBtn">
-        </form>
-    </div>
-
-    <div id="tableDiv">
-
-        <table id="table">
-
-            <thead>
-            <tr>
-                <th class="header">ID</th>
-                <th class="header">Name</th>
-                <th class="header">Surname</th>
-                <th>Remove</th>
-            </tr>
-            </thead>
-            <tbody id="tbody">
-
-                <!--- Table Entries --->
-            </tbody>
-        </table>
-        <p id="hint">YOUR TABLE IS EMPTY</p>
-
-    </div>
-
-    <div id="debugDiv">
-        <a id="linkToInfo" href="info.html"> About us </a>
-        <br>
-        <button id="clearStorageBtn" onclick="storageClear()"> CLEAR STORAGE </button>  <!--- Remove before submission --->
-    </div>
-
+        <!--- Table Entries --->
+        </tbody>
+    </table>
+    <p id="hint">YOUR TABLE IS EMPTY</p>
+</div>
+<div id="debugDiv">
+    <a id="linkToInfo" href="info.html"> About us </a>
+    <br>
+    <button id="clearStorageBtn" onclick="storageClear()"> CLEAR STORAGE </button>  <!--- Remove before submission --->
+</div>
+<!--Footer-->
+<div class="container">
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+        <p class="text-center text-muted">&copy; 2021 Company, Inc</p>
+    </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

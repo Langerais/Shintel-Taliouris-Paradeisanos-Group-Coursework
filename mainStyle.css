@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(127, 143, 168);
+    background-color: rgb(57, 235, 160);
 }
 
 div {
@@ -74,7 +74,6 @@ button {
     padding: 1px 5px 1px 5px;
     text-align: center;
 }
-
 #clearStorageBtn {
     margin-top: 10px;
     alignment: center;
@@ -178,4 +177,39 @@ form {
         cursor: nw-resize;
     }
 
+}
+/* Style the header */
+.header {
+    padding: 10px 16px;
+    background: #555;
+    color: #f1f1f1;
+}
+
+/* Page content */
+.content {
+    padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 102px;
+}
+.b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
 }
