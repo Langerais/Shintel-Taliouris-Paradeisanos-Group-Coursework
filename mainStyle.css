@@ -1,11 +1,11 @@
-body {
-    background-color: rgb(57, 235, 160);
+body{
+    min-width: 430px;
 }
 
 div {
     margin: auto;
     width: 100%;
-    min-width: 70px;
+    min-width: 93px;
     text-align: center;
 }
 
@@ -13,10 +13,9 @@ table {
     margin: auto;
     width: 100%;
     border-collapse: collapse;
-
     border-radius: 10px;
     text-align: center;
-    min-width: 442px;
+    min-width: 430px;
 }
 
 #table caption {
@@ -26,21 +25,24 @@ table {
 
 #table th {
     text-transform: inherit;
-    background-color: #66748c;
+    background-color: #00482d;
     color: #FFFFFF;
     padding: 2px 20px 2px 20px;
     border-left: solid #66748c;
     border-right: solid #66748c;
-    border-width: 2px;
+    border-width: 1px;
     cursor: pointer;
+    min-width: 92px;
 }
 
 #table td {
     padding: 5px 10px 5px 10px;
-    border-color: #65738c;
+    border-color: #003f29;
     border-width: 1px;
     border-style: none solid dotted solid;
     vertical-align: top;
+    min-width: 92px;
+    text-wrap: normal;
 }
 /* Alternating color for table rows */
 #table tr:nth-child(odd) {
@@ -60,13 +62,15 @@ button {
     background-color: rgba(102, 255, 237, 0.37);
     border-radius: 4px;
     filter: invert(100%);
-    padding: 2px;
+    object-fit: cover;
+    width: 25px;
+    height: auto;
+    margin-top: 2px;
 }
 
 .removeBtn:hover {
     background-color: rgba(102, 255, 237, 0.95);
 }
-
 
 #addBtn {
     margin: 5px auto 5px 10px;
@@ -80,8 +84,15 @@ button {
     max-lines: 2;
     width: 12%;
     min-width: 110px;
-    height: 40px;
-
+    height: 55px;
+}
+#dummyDataBtn {
+    margin-top: 10px;
+    alignment: center;
+    max-lines: 2;
+    width: 12%;
+    min-width: 110px;
+    height: 55px;
 }
 
 .inputLabel {
@@ -95,7 +106,7 @@ input {
 }
 
 input[type=text] {
-    border: 2px solid #3365cb;
+    border: 2px solid #009b5f;
     border-radius: 4px;
     background-color: #f8f8f8;
     cursor: text;
@@ -107,100 +118,27 @@ input[type=text] {
 }
 
 form {
-    min-width: 442px;
+    min-width: 540px;
     text-align: center;
-    border-radius: 4px 4px 0 0;
-    background-color: #67758c;
-    border-left: solid #66748c;
-    border-right: solid #66748c;
+    background-color: #005939;
+    border-left: solid #005939;
+    border-right: solid #005939;
     margin-bottom: -1px;
 }
 
 /* 'YOUR TABLE IS EMPTY' table row */
 #hint {
 
-    min-width: 442px;
+    min-width: 540px;
     background-color: #e4e4e5;
     margin: auto auto -1px;
-    border-width: 2px;
+    border-width: 1px;
     border-right: #cccccc dotted;
     border-left: #cccccc dotted;
     color: #828283;
 
 }
 
-#linkToInfo {
-    color: #282828;
-    opacity: 50%;
-    margin: auto;
-    width: fit-content;
-    text-decoration-color: rgba(255, 255, 255, 0);
-}
-
-
-/* Lets add some early 2000s vibes? */
-#linkToInfo:hover {
-    opacity: 100%;
-    animation: blinker 0.35s linear infinite;
-}
-
-@keyframes blinker {
-    0%{
-        font-size: initial ;
-        cursor: n-resize;
-    }
-    15% {
-        color: red;
-        cursor: ne-resize;
-    }
-    30% {
-        color: orange;
-        cursor: e-resize;
-    }
-    45% {
-        color: lawngreen;
-        font-size: larger;
-        cursor: se-resize;
-    }
-    55% {
-        color: blue;
-        cursor: s-resize;
-    }
-    70% {
-        cursor: sw-resize;
-    }
-    85% {
-        color: blueviolet;
-        cursor: w-resize;
-    }
-    100% {
-        cursor: nw-resize;
-    }
-
-}
-/* Style the header */
-.header {
-    padding: 10px 16px;
-    background: #555;
-    color: #f1f1f1;
-}
-
-/* Page content */
-.content {
-    padding: 16px;
-}
-
-/* The sticky class is added to the header with JS when it reaches its scroll position */
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-    padding-top: 102px;
-}
 .b-example-divider {
     height: 3rem;
     background-color: rgba(0, 0, 0, .1);

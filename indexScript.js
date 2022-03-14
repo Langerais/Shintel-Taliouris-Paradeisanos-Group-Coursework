@@ -130,8 +130,18 @@ function addRow(id, fname, lname){
     $("table.tablesorter").trigger("update");
 }
 
+function dummyData(size){   //For testing purposes / Also allows numeric data here
+    storageClear()
+    for(let i = 1; i <= size; i++) {
+        let fname = "Name-" + i;
+        let lname = "Surname-" + i;
+        addPerson(i, fname, lname);
+    }
+}
+
 function storageClear(){
     window.localStorage.clear();
+    maxId = 0;
     tableRefresh();
 }
 

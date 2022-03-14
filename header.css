@@ -1,23 +1,104 @@
 /* Style the header */
 .header {
     padding: 10px 16px;
-    background: #555;
-    color: #f1f1f1;
-  }
-  
+    background: #006b42;
+    z-index: 999;
+    min-width: 540px;
+}
+
   /* Page content */
-  .content {
+.content {
     padding: 16px;
-  }
-  
+}
+
+
+.nav-link{
+    font-size: large;
+}
+#myHeader .nav-link{
+    padding-right: 50%;
+    margin-top: 40%;
+    font-size: x-large;
+    color: aliceblue !important;
+    border-radius: 3px;
+    background-color: #005939;
+    margin-right: 2%;
+}
+
+#myHeader .nav-link:hover{
+    background-color: #65c89a;
+}
+
   /* The sticky class is added to the header with JS when it reaches its scroll position */
-  .sticky {
+.sticky {
     position: fixed;
     top: 0;
     width: 100%
-  }
-  
+}
+
   /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-  .sticky + .content {
+.sticky + .content {
     padding-top: 102px;
-  }
+}
+
+.logo{
+    width: 80px;
+    height: 80px;
+    filter: contrast(0%) brightness(0%) invert(100%);
+    display: block;
+    margin-right: 55%;
+}
+
+/* Lets add some early 2000s vibes? */
+.logo:hover {
+    opacity: 100%;
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    0%{
+        width: 80px;
+        filter: contrast(0%) brightness(0%) invert(100%);
+        cursor: n-resize;
+    }
+    12% {
+        width: 65px;
+        filter: contrast(0%) brightness(15%) invert(100%);
+        cursor: ne-resize;
+    }
+    24% {
+        width: 50px;
+        filter: contrast(0%) brightness(30%) invert(100%);
+        cursor: e-resize;
+    }
+    36% {
+        width: 35px;
+        filter: contrast(0%) brightness(40%) invert(100%);
+        cursor: se-resize;
+    }
+    48% {
+        width: 15px;
+        filter: contrast(0%) brightness(50%) invert(100%);
+        cursor: s-resize;
+    }
+    60% {
+        width: 35px;
+        filter: contrast(0%) brightness(40%) invert(100%);
+    }
+    72% {
+        width: 50px;
+        cursor: sw-resize;
+        filter: contrast(0%) brightness(30%) invert(100%);
+    }
+    84% {
+        width: 65px;
+        filter: contrast(0%) brightness(15%) invert(100%);
+        cursor: w-resize;
+    }
+    96% {
+        width: 80px;
+        cursor: nw-resize;
+        filter: contrast(0%) brightness(0%) invert(100%);
+    }
+
+}

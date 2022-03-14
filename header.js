@@ -1,4 +1,4 @@
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {headerToggleSticky()};
 
 
 var header = document.getElementById("myHeader");
@@ -7,7 +7,7 @@ var header = document.getElementById("myHeader");
 var sticky = header.offsetTop;
 
 
-function myFunction() {
+function headerToggleSticky() {
     if (window.pageYOffset > sticky) {
         header.classList.add("sticky");
     } else {
