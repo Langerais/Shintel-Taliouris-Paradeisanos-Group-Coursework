@@ -1,13 +1,3 @@
-/*
- TODO:
-    - Add sticky header
-    - Remove "Clear Storage" button
-    - Info page
-    - Bootstrap CSS styling
-    - Add comments
-    - Remove debugging tools
-    - Clean up a bit;
- */
 /**
  * @fileOverview Script for main page, mostly for table
  * @author Samuil Shintel
@@ -40,7 +30,7 @@ $(document).ready(function(){
         $(this).val(firstLetter + rest);
     });
 
-    $("form").on("submit", function (event){    //Adding new entity to the table
+    $("form").on("submit", function (){    //Adding new entity to the table
 
         let fname = $("#fnameinp").val();   //Get Firstname from input field
         let lname = $("#lnameinp").val();   //Get Lastname from input field
@@ -130,7 +120,7 @@ function addRow(id, fname, lname){
     $("table.tablesorter").trigger("update");
 }
 
-function dummyData(size){   //For testing purposes / Also allows numeric data here
+function dummyData(size){   //For testing purposes / Also allows numeric data here /
     storageClear()
     for(let i = 1; i <= size; i++) {
         let fname = "Name-" + i;
